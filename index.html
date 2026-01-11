@@ -260,6 +260,19 @@ const dataByTopic = {
 },
 
 
+ ],
+
+ "Crime": [
+{
+  vn: "Sự phổ biển ngày càng tăng của tội phạm mạng đòi hỏi việc thực hiện các biện pháp an ninh mạng nghiêm ngặt hơn.",
+  parts: [
+    { vn: "tội phạm mạng", en: "cybercrime", color: "green" },
+    { vn: "đòi hỏi", en: "necessitate", color: "pink" },
+    { vn: "thực hiện", en: "implement", color: "yellow" },
+    { vn: "các biện pháp an ninh mạng", en: "cybersecurity measures", color: "blue" }
+  ],
+  full: "The increasing prevalence of cybercrime necessitates implementing stricter cybersecurity measures."
+},
 
   ],
 
@@ -480,7 +493,7 @@ let currentIndex = 0;
 
 /* ====== TỰ ĐỘNG THÊM OPTION CHO TOPIC SELECT ====== */
 const topicSelect = document.getElementById("topicSelect");
-Object.keys(dataByTopic).forEach(topic => {
+Object.keys(dataByTopic).sort().forEach(topic => {  // sort() sắp xếp A-Z
   const opt = document.createElement("option");
   opt.value = topic;
   opt.textContent = topic;
