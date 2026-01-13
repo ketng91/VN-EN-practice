@@ -74,13 +74,43 @@ header {
 #topicSelect {
   font-size: 20px;
   padding: 5px 10px;
-  margin-top: 100px; /* tạo khoảng cách so với header cố định */
+  margin-top: 40px; /* tạo khoảng cách so với header cố định */
   margin-bottom: 20px;
   background-color: #f0f0f0;  /* xám nhạt */
   color: #000;
   border-radius: 6px;
   width: 100%;
   max-width: 500px;
+}
+/* ====== TOPIC FLEX ====== */
+.topic-wrapper {
+  display: flex;          /* xếp label + select theo hàng */
+  align-items: center;    /* canh giữa theo chiều dọc */
+  gap: 8px;               /* khoảng cách label và select */
+  margin-top: 20px;       /* cách header */
+  margin-bottom: 20px;    /* cách nội dung dưới */
+}
+
+#topicSelect {
+  font-size: 20px;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  color: #000;
+  border-radius: 6px;
+  width: auto;            /* vừa nội dung */
+  min-width: 200px;       /* không quá nhỏ */
+}
+
+/* Responsive nhỏ hơn 480px */
+@media (max-width: 480px) {
+  .topic-wrapper {
+    gap: 5px;
+    flex-wrap: wrap;      /* nếu quá nhỏ, label xuống dòng */
+  }
+  #topicSelect {
+    font-size: 16px;
+    min-width: 150px;
+  }
 }
 
 /* ====== CÂU VN/EN ===== */
@@ -271,8 +301,11 @@ button {
 </header>
 
 <!-- ===== CHỌN TOPIC ===== -->
-<label for="topicSelect">Chọn topic:</label>
-<select id="topicSelect"></select>
+<div class="topic-wrapper">
+  <label for="topicSelect">Chọn topic:</label>
+  <select id="topicSelect"></select>
+</div>
+
 
 <!-- ===== CÂU VN + EN ===== -->
 <div class="sentence" id="vnSentence"></div>
