@@ -104,11 +104,14 @@ header {
 /* Responsive nhỏ hơn 480px */
 @media (max-width: 480px) {
   .topic-wrapper {
+    margin-top: 10px;    /* khoảng cách từ header xuống label + select */
+    margin-bottom: 10px;
     gap: 5px;
     flex-wrap: wrap;      /* nếu quá nhỏ, label xuống dòng */
   }
   #topicSelect {
     font-size: 16px;
+    margin-top: 10px;   /* giảm khoảng cách với header */
     min-width: 150px;
   }
 }
