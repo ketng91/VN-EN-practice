@@ -163,15 +163,13 @@ header {
 
 /* ====== BUTTONS ===== */
 button { 
-  padding: 8px 20px;       /* khoảng cách trong nút */
+  padding: 8px 0;          /* khoảng cách trên/dưới */
   margin-right: 10px; 
   cursor: pointer; 
   border-radius: 5px;
   border: none;
   font-size: 16px;
-  flex-shrink: 0;
-  width: auto;              /* độ rộng vừa nội dung */
-  max-width: 200px;         /* giới hạn tối đa */
+  width: 140px;            /* cố định độ rộng */
   white-space: nowrap;      /* tránh xuống dòng */
   text-align: center;
 }
@@ -277,8 +275,7 @@ button {
   }
 
  button {
-  width: auto;             /* không full width */
-  max-width: 180px;        /* giới hạn vừa phải */
+  width: 140px;             /* không full width */
   font-size: 14px;         /* font nhỏ hơn cho mobile */
   margin-bottom: 5px;      
 }
